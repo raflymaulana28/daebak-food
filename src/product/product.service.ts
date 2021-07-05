@@ -55,10 +55,16 @@ export class ProductService {
     id: string,
     updateProductDto: UpdateProductDto,
   ): Promise<Product> {
-    return await this.model.findByIdAndUpdate(id, updateProductDto);
+    return await this.model.findByIdAndUpdate(id, updateProductDto, {
+      new: true,
+    });
   }
 
-  async delete(id: string): Promise<Product> {
-    return await this.model.findByIdAndDelete(id).exec();
+  async delete(id: string): Promise<{ message: string }> {
+    const res = await this.model.findByIdAndDelete(id).exec();
+    if (res) {
+      return { message: 'Success Delete Product!' };
+    } else {
+    }
   }
 }
