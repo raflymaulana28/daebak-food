@@ -68,9 +68,10 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Stay in touch
+## Credits     
 
-- Author - [Rafly Maulana](https://raflymaulana.xyz)   
+- Author - [Rafly Maulana](https://raflymaulana.xyz)    
+- Thanks to [Nest JS](https://github.com/nestjs/nest)  
 
 ## License
 
